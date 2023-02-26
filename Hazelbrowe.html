@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Hazel Search Engine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hazel Search Engine</h1>
+      <form action="">
+       <input type="text" placeholder="Search...">
+        <button><i class="fa-brands fa-searchengin"></i></button>
+      </form>
+    </div>
+    <script>
+        const form = document.querySelector('form');
+        const input = document.querySelector('input');
+        
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+          const searchQuery = input.value;
+          const url = `https://www.google.com/search?q=${searchQuery}`;
+          window.open(url, '_blank');
+        });
+        
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #232423;
+          }
+          
+          .container {
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 50px;
+            text-align: center;
+          }
+          
+          h1 {
+            color: #fff;
+          }
+          
+          form {
+            margin-top: 50px;
+          }
+          
+          input[type="text"] {
+            width: 60%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+          }
+          
+          button {
+            background-color: whitesmoke ;
+            width: 20%;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+          }
+          
+          button:hover {
+            background-color: #357ae8;
+          }
+          
+    </style>
+  </body>
+</html>
